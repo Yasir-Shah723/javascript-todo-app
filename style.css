@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+.todo-title{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #333;
+}
+.todoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677, #4e085f);
+    padding: 10px;
+}
+
+.todoApp{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.todoApp h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.todoApp img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+   
+}
+#inputBox{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    color: #333;
+}
+
+#btn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #002765;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("images/icons8-circle-50.png");
+    background-size: cover;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #888;
+}
+ul li.checked::before{
+    background-image: url("images/icons8-filled-circle-50.png");
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+   
+}
+ul li span:hover{
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+}
